@@ -1,0 +1,165 @@
+.--common-style-top {
+    max-width: 708px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 0;
+    margin-bottom: 1rem;
+    @include breakpoint(mobile-max) {
+        max-width: 100%;
+        width: 100%;
+    }
+    .caption-title-large {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        @include font-size(135px);
+        line-height: 126px;
+        color: #706960;
+        font-weight: 700;
+        opacity: 0.2;
+        text-transform: uppercase;
+        @include breakpoint(mobile-max) {
+            @include font-size(54px);
+            line-height: 25px;
+        }
+    }
+    .caption-title-small {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        @include font-size(36px);
+        line-height: 30px;
+        color: #706960;
+        top: 64%;
+        @include horizontal-center-transform();
+        @include breakpoint(mobile-max) {
+            @include font-size(16px);
+            top: 42%;
+        }
+    }
+}
+
+.about-section {
+    margin-bottom: 1rem;
+    &__top {}
+    &__bottom {
+        margin-top: 1rem !important;
+        max-width: 886px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        color: #272727;
+        @include fontSize(16px);
+    }
+}
+
+.service-section {
+    margin-bottom: 1rem;
+    &__top {}
+    &__bottom {
+        margin-top: 2rem;
+        text-align: center;
+        margin: 0 auto;
+        .ups-lists {
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 74px;
+            @include breakpoint(mobile-max) {
+                margin-bottom: 20px;
+            }
+            @include breakpoint(mobile-max) {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            li {
+                width: 100px;
+                @include breakpoint(mobile-max) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    box-shadow: 1px 3px 6px #00000029;
+                    padding: 10px 10px;
+                }
+                .ups-lists__icon-box {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 16px;
+                }
+                .ups-lists__icon-name {
+                    text-align: center;
+                    @include fontSize(16px);
+                    font-weight: bold;
+                    color: $text-color;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.middle-divider-section {
+    img {
+        width: 100%;
+    }
+}
+
+.tender-section {
+    background: transparent linear-gradient(0deg, #FFFFFF 0%, #E6E6E6 100%) 0% 0% no-repeat padding-box;
+    padding-top: 76px;
+    @include breakpoint(mobile-max) {
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    &__top {}
+    &__bottom {
+        .ups-lists-tender {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            li {
+                display: flex;
+                flex-wrap: nowrap;
+                width: 556px;
+                height: 223px;
+                box-shadow: 0px 3px 6px #00000029;
+                opacity: 1;
+                margin-bottom: 38px;
+                @include breakpoint(mobile-max) {
+                    flex-direction: column;
+                    height: auto;
+                    margin-bottom: 14px;
+                }
+                .ups-lists-tender__info {
+                    padding: 27px 23px 2px 27px;
+                    background-color: $text-white;
+                    .tender-caption-title {
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 900;
+                        font-style: normal;
+                        @include fontSize(18px);
+                        color: #505050;
+                        margin-bottom: 12px;
+                        @include breakpoint(mobile-max) {
+                            text-align: center;
+                        }
+                    }
+                    .tender-info {
+                        color: #505050;
+                        @include fontSize(16px);
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+                .ups-lists-tender__img {
+                    img {
+                        @include breakpoint(mobile-max) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

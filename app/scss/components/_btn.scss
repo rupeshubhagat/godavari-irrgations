@@ -1,0 +1,33 @@
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.primary-btn {
+    background-color: $base-color;
+    color: $text-color;
+    @include fontSize(16px);
+    font-weight: 400;
+    @include transition();
+    border-color: transparent;
+    padding: 5px 9px 7px 24px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 10px;
+    text-decoration: none !important;
+    &:hover,
+     :active {
+        color: $base-color;
+        background-color: #ffffff;
+        border: 1px solid $base-color;
+    }
+    @include breakpoint(mobile-max) {
+        @include fontSize(12px);
+    }
+}
