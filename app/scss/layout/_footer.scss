@@ -1,0 +1,368 @@
+.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    @include breakpoint(mobile-max) {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    &__left {
+        width: 60%;
+        background-color: $base-color;
+        padding-left: 83px;
+        padding-top: 63px;
+        padding-bottom: 38px;
+        @include breakpoint(ipad-max) {
+            padding-left: 21px;
+        }
+        @include breakpoint(mobile-max) {
+            padding-left: 0px;
+            width: 100%;
+            padding-top: 21px;
+        }
+    }
+    &__right {
+        width: 40%;
+        background-color: #e5d663;
+        padding-top: 66px;
+        padding-right: 83px;
+        padding-bottom: 38px;
+        @include breakpoint(ipad-max) {
+            padding-right: 40px;
+        }
+        @include breakpoint(mobile-max) {
+            width: 100%;
+            padding-top: 21px;
+            padding-right: 14px;
+        }
+        .footer__cont-call-email {
+            .footer-social-lists {
+                li {
+                    display: flex;
+                    margin-bottom: 1rem;
+                    .footer__social-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 82px;
+                    }
+                    .footer_social-info {
+                        width: 100%;
+                        max-width: 234px;
+                        border-bottom: 1px solid $text-color-secondary;
+                        h2 {
+                            margin-bottom: 5px;
+                        }
+                        p {
+                            color: $text-color-secondary;
+                            @include fontSize(14px);
+                            @include breakpoint(ipad-max) {
+                                @include fontSize(10px);
+                            }
+                        }
+                        .font-bold {
+                            font-family: lato-bold;
+                        }
+                    }
+                }
+            }
+        }
+        .footer__follow-us {
+            display: flex;
+            padding-left: 19px;
+            align-items: baseline;
+            @include breakpoint(mobile-max) {
+                justify-content: center;
+            }
+            h2 {
+                @include fontSize(18px);
+                color: $text-color-secondary;
+                font-family: Aileron;
+                border-right: 1px solid $text-white;
+                padding-right: 15px;
+                margin-right: 23px;
+                @include breakpoint(ipad-max) {
+                    @include fontSize(14px);
+                    margin-right: 15px;
+                }
+            }
+            .ups-lists-follow-us {
+                display: flex;
+                align-items: baseline;
+                li {
+                    position: relative;
+                    width: 38px;
+                    @include breakpoint(ipad-max) {
+                        width: 24px;
+                    }
+                    a {
+                        span {
+                            width: 15px;
+                            height: 19px;
+                            border: 1px solid $text-color-secondary;
+                            /* background-color: red; */
+                            display: inline-block;
+                        }
+                    }
+                    &:nth-child(2) {
+                        a {
+                            span {
+                                width: 15px;
+                                height: 23px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer__subscribe-box {
+    padding-right: 74px;
+    margin-bottom: 23px;
+    @include breakpoint(ipad-max) {
+        padding-right: 27px;
+    }
+    @include breakpoint(ipad-max) {
+        padding-right: 0px;
+    }
+    .subscribe-title {
+        @include fontSize(32px);
+        font-weight: bold;
+        color: $text-color-secondary;
+        margin-bottom: 1rem;
+        @include breakpoint(ipad-max) {
+            @include fontSize(24px);
+        }
+        @include breakpoint(mobile-max) {
+            @include fontSize(16px);
+            text-align: center;
+        }
+    }
+    .footer__subscribe-form {
+        position: relative;
+        form {
+            .form-control {
+                width: 100%;
+                border-radius: 80px;
+                @include fontSize(14px);
+                @include background-color-rgba(#e8d75e, 0.5);
+                color: $text-color-secondary;
+                padding: 11px 18px;
+                height: auto;
+                border: 1px solid #e8d75e;
+                @include input-placeholder {
+                    color: $text-color-secondary;
+                    @include fontSize(14px);
+                }
+            }
+            .subscribe-btn {
+                border-radius: 90px;
+                background-color: $text-white;
+                color: #393939;
+                position: absolute;
+                font-family: SFCompactDisplay;
+                font-weight: 900;
+                top: 5px;
+                right: 10px;
+                border: 1px solid transparent;
+                @include fontSize(14px);
+                border-radius: 90px;
+                padding: 8px 30px 7px 31px;
+                text-transform: uppercase;
+                @include transition();
+                &:hover {
+                    background-color: $base-bg-color;
+                    color: $text-white;
+                    border: 1px solid $text-white;
+                }
+                @include breakpoint(mobile-max) {
+                    @include fontSize(10px);
+                    top: 8px
+                }
+            }
+        }
+    }
+}
+
+// .footer__menu-lists {
+//     padding-right: 74px;
+//     display: flex;
+//     flex-wrap: no-wrap;
+//     margin-bottom: 66px;
+//     @include breakpoint(ipad-max) {
+//         padding-right: 27px;
+//     }
+//     .footer__about-lists {}
+//     .footer__imp-lists {}
+// }
+.form-control:focus {
+    color: $text-white;
+    background-color: #fff;
+    border-color: $text-white;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25);
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.footer__menu-lists {
+    display: flex;
+    flex-wrap: no-wrap;
+    width: 100%;
+    padding-right: 74px;
+    margin-bottom: 66px;
+    @include breakpoint(ipad-max) {
+        padding-right: 27px;
+    }
+    @include breakpoint(mobile-max) {
+        padding-left: 16px;
+        padding-right: 3px;
+        margin-bottom: 25px;
+    }
+    .footer__about-lists {
+        width: 30%;
+        @include breakpoint(ipad-max) {
+            width: 25%;
+        }
+        @include breakpoint(mobile-max) {
+            width: 34%;
+        }
+    }
+    .footer__imp-lists {
+        width: 75%;
+        @include breakpoint(ipad-max) {
+            width: 70%;
+        }
+        @include breakpoint(mobile-max) {
+            width: 66%;
+        }
+    }
+}
+
+.--footer-ups-list-style-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    li {
+        width: 50%;
+    }
+}
+
+.footer__copy-rights {
+    display: flex;
+    @include breakpoint(mobile-max) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer__copy-rights-top {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        @include breakpoint(mobile-max) {
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .copy-right-title {
+            @include fontSize(14px);
+            font-weight: bold;
+            color: $text-color-secondary;
+            margin-bottom: 10px;
+            @include breakpoint(desktop-max) {
+                @include fontSize(9px);
+            }
+            @include breakpoint(mobile-max) {
+                @include fontSize(9px);
+                margin-bottom: 5px;
+                text-align: center;
+            }
+        }
+        h3 {
+            text-align: left;
+            @include fontSize(12px);
+            padding-right: 20px;
+            color: $text-color-secondary;
+            @include breakpoint(desktop-max) {
+                @include fontSize(9px);
+            }
+            @include breakpoint(mobile-max) {
+                @include fontSize(9px);
+                padding-right: 0px;
+                text-align: center;
+            }
+        }
+    }
+    .footer__copy-rights-bottom {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        @include breakpoint(mobile-max) {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .copy-right-title {
+            @include fontSize(14px);
+            font-weight: bold;
+            color: $text-color-secondary;
+            margin-bottom: 10px;
+            text-align: right;
+            @include breakpoint(desktop-max) {
+                @include fontSize(10px);
+            }
+            @include breakpoint(mobile-max) {
+                @include fontSize(9px);
+                margin-bottom: 5px;
+                text-align: center;
+            }
+        }
+        h3 {
+            text-align: right;
+            @include fontSize(12px);
+            padding-right: 20px;
+            color: $text-color-secondary;
+            @include breakpoint(desktop-max) {
+                @include fontSize(10px);
+            }
+            @include breakpoint(mobile-max) {
+                @include fontSize(9px);
+                padding-right: 0px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.footer__caption-title {
+    @include fontSize(18px);
+    color: $text-color-secondary;
+    margin-bottom: 1rem;
+    font-family: SFCompactDisplay;
+    font-weight: 900;
+    @include breakpoint(ipad-max) {
+        @include fontSize(16px);
+    }
+    @include breakpoint(mobile-max) {
+        @include fontSize(12px);
+        margin-bottom: 3px;
+    }
+}
+
+.footer__ups-lists {
+    li {
+        a {
+            @include fontSize(14px);
+            color: $text-color-secondary;
+            font-family: SFCompactDisplay;
+            @include breakpoint(ipad-max) {
+                @include fontSize(9px);
+            }
+        }
+    }
+}

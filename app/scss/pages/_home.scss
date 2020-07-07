@@ -41,7 +41,7 @@
 }
 
 .about-section {
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
     &__top {}
     &__bottom {
         margin-top: 1rem !important;
@@ -51,6 +51,34 @@
         text-align: center;
         color: #272727;
         @include fontSize(16px);
+    }
+}
+
+.slider-section {
+    display: flex;
+    height: 500px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    &__left {
+        width: 20%;
+        .style-change {
+            transform: rotate(270deg);
+            max-height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .caption-title-small {
+                text-align: center;
+                display: inline-block;
+                width: 500px;
+                top: 63%;
+                position: absolute;
+                left: -1%;
+            }
+        }
+    }
+    &__right {
+        width: 80%;
     }
 }
 
@@ -107,9 +135,11 @@
 .tender-section {
     background: transparent linear-gradient(0deg, #FFFFFF 0%, #E6E6E6 100%) 0% 0% no-repeat padding-box;
     padding-top: 76px;
+    margin-bottom: 74px;
     @include breakpoint(mobile-max) {
         margin-top: 1rem;
         padding-top: 1rem;
+        margin-bottom: 2rem;
     }
     &__top {}
     &__bottom {
