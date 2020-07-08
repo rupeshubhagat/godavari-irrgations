@@ -12,14 +12,14 @@
     .caption-title-large {
         text-align: center;
         font-family: 'Poppins', sans-serif;
-        @include font-size(135px);
+        @include fontSize(135px);
         line-height: 126px;
         color: #706960;
         font-weight: 700;
         opacity: 0.2;
         text-transform: uppercase;
         @include breakpoint(mobile-max) {
-            @include font-size(54px);
+            @include fontSize(54px);
             line-height: 25px;
         }
     }
@@ -28,13 +28,13 @@
         text-transform: uppercase;
         font-family: 'Poppins', sans-serif;
         font-weight: 900;
-        @include font-size(36px);
+        @include fontSize(36px);
         line-height: 30px;
         color: #706960;
         top: 64%;
         @include horizontal-center-transform();
         @include breakpoint(mobile-max) {
-            @include font-size(16px);
+            @include fontSize(16px);
             top: 42%;
         }
     }
@@ -42,7 +42,7 @@
 
 .about-section {
     margin-bottom: 4rem;
-    &__top {}
+    // &__top {}
     &__bottom {
         margin-top: 1rem !important;
         max-width: 886px;
@@ -60,13 +60,27 @@
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 3rem;
+    @include breakpoint(mobile-max) {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2rem;
+    }
     &__left {
         width: 20%;
+        @include breakpoint(mobile-max) {
+            width: 100%;
+        }
         .style-change {
             transform: rotate(270deg);
             max-height: 100%;
             display: flex;
             justify-content: flex-end;
+            @include breakpoint(mobile-max) {
+                transform: rotate(0deg);
+                justify-content: center;
+                width: 100%;
+            }
             .caption-title-small {
                 text-align: center;
                 display: inline-block;
@@ -74,17 +88,26 @@
                 top: 63%;
                 position: absolute;
                 left: -1%;
+                @include breakpoint(mobile-max) {
+                    top: 43%;
+                    left: 50%;
+                    width: 100%;
+                }
             }
         }
     }
     &__right {
         width: 80%;
+        overflow: hidden;
+        @include breakpoint(mobile-max) {
+            width: 100%;
+        }
     }
 }
 
 .service-section {
     margin-bottom: 1rem;
-    &__top {}
+    // &__top {}
     &__bottom {
         margin-top: 2rem;
         text-align: center;
@@ -141,7 +164,7 @@
         padding-top: 1rem;
         margin-bottom: 2rem;
     }
-    &__top {}
+    // &__top {}
     &__bottom {
         .ups-lists-tender {
             display: flex;
