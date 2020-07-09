@@ -44,6 +44,9 @@
                         justify-content: center;
                         align-items: center;
                         width: 82px;
+                        a {
+                            font-size: 30px;
+                        }
                     }
                     .footer_social-info {
                         width: 100%;
@@ -61,6 +64,13 @@
                         }
                         .font-bold {
                             font-family: lato-bold;
+                        }
+                    }
+                    &:nth-child(3) {
+                        .footer__social-icon {
+                            a {
+                                font-size: 20px;
+                            }
                         }
                     }
                 }

@@ -8,10 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Godavari Marathwada Irrigation Development Corporation</title>
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+
     <!-- Normal CSS -->
     <!-- jquery slider/ css -->
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
@@ -21,9 +26,9 @@
 </head>
 
 <body>
-    <header class="bg-header">
+    <header>
         <div class="container">
-            <div class="header">
+            <div class="header bg-header">
                 <div class="header__top">
                     <div class="header__logo">
                         <a href="javascript:void(0)" title="logo">
@@ -78,7 +83,7 @@
                                 </li>
                             </ul>
                             <div class="header__search-box">
-                                <p><span class="outer-search"><span class="icon-search"></span></span>
+                                <p><a href="#" data-toggle="modal" data-target="#myModal"><span class="outer-search"><span class="icon-search"></span></a></span>
                                 </p>
                             </div>
                             <div class="mobile-lang-search">
@@ -104,8 +109,8 @@
                                     <img src="./images/logo-new.png" alt="logo" title="logo">
                                 </a>
                                 <button class="navbar-toggler nav-btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                                          <span class="navbar-toggler-icon"></span>
+                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarNav">
                                     <ul class="navbar-nav">
                                         <li class="nav-item active">
@@ -139,6 +144,30 @@
                     <span></span>
                 </a>
             </div>
+            <!-- The Modal Search -->
+            <div class="modal" id="myModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Enter Your Search Text</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form class="search-form">
+                                <input type="text" placeholder="Search.." name="search2">
+                                <button type="submit"><span class="icon-search"</span></i></button>
+                            </form>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -152,7 +181,6 @@
                     <div class="about-section__bottom">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
                             specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-
                         <a class="primary-btn" href="javascript:void(0)">know more</a>
                     </div>
                 </div>
@@ -213,6 +241,7 @@
                                     <a href="javascript:void(0)"><span></span></a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -276,8 +305,10 @@
             </div>
         </section>
         <section>
-            <div class="middle-divider-section">
-                <img class="img-fluid" src="./images/middle-divider.png" alt="divder-img">
+            <div class="container">
+                <div class="middle-divider-section">
+                    <img class="img-fluid" src="./images/middle-divider.png" alt="divder-img">
+                </div>
             </div>
         </section>
         <section>
@@ -423,7 +454,7 @@
                             <li>
                                 <div class="footer__social-icon">
                                     <a href="javascript:void(0)">
-                                        <img src="./images/footer-email-icon.png" alt="location">
+                                        <span class="icon-location"></span>
                                     </a>
                                 </div>
                                 <div class="footer_social-info">
@@ -435,7 +466,7 @@
                             <li>
                                 <div class="footer__social-icon">
                                     <a href="javascript:void(0)">
-                                        <img src="./images/footer-email-icon.png" alt="call us">
+                                        <span class="icon-call"></span>
                                     </a>
                                 </div>
                                 <div class="footer_social-info">
@@ -446,7 +477,7 @@
                             <li>
                                 <div class="footer__social-icon">
                                     <a href="javascript:void(0)">
-                                        <img src="./images/footer-email-icon.png" alt="location">
+                                        <span class="icon-mail"></span>
                                     </a>
                                 </div>
                                 <div class="footer_social-info">
@@ -489,14 +520,20 @@
 
 
 <!-- Normal JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
 <script src="js/main.js"></script>
 <script src="js/carosule-news.js"></script>
 
 <!-- Minified Combine JS -->
 <!-- <script src="js/bundle.min.js"></script> -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> -->
+
 
 </html>

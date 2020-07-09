@@ -87,7 +87,13 @@
                 width: 500px;
                 top: 63%;
                 position: absolute;
-                left: -1%;
+                left: 22%;
+                @include breakpoint(desktop-max) {
+                    left: 2%;
+                }
+                @include breakpoint(ipad-max) {
+                    left: -25%;
+                }
                 @include breakpoint(mobile-max) {
                     top: 43%;
                     left: 50%;
