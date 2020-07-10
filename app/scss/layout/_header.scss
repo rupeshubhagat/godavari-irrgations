@@ -1,5 +1,4 @@
 .header {
-    position: relative;
     background-image: url("../images/header-back-2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -9,11 +8,7 @@
         height: auto;
     }
     &__top {
-        display: flex;
-        justify-content: space-around;
         padding: 15px 0;
-        // box-shadow: 0px 3px 6px #00000029;
-        position: relative;
         z-index: 1;
         @include breakpoint(mobile-max) {
             flex-direction: column;
@@ -21,22 +16,15 @@
         }
     }
     &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         @include breakpoint(mobile-max) {
-            display: none;
+            display: none !important;
         }
         a {
             @include fontSize(15px);
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: bold;
             color: $text-color;
-            text-transform: uppercase;
-            display: flex;
             @include fontSize(11px);
-            justify-content: center;
-            align-items: center;
             text-decoration: none;
             @include breakpoint(desktop-max) {
                 @include fontSize(10px);
@@ -57,16 +45,10 @@
         }
     }
     &__links-box {
-        // display: flex;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         @include breakpoint(mobile-max) {
-            flex-direction: column-reverse;
+            flex-direction: column-reverse !important;
         }
         .header__links-box-top {
-            display: flex;
             @include breakpoint(mobile-max) {
                 width: 100%;
                 flex-direction: column;
@@ -193,11 +175,8 @@
                 }
             }
             .language-change {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 @include breakpoint(mobile-max) {
-                    display: none;
+                    display: none !important;
                 }
                 select {
                     border: none;
@@ -208,11 +187,8 @@
                 }
             }
             .header__search-box {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 @include breakpoint(mobile-max) {
-                    display: none;
+                    display: none !important;
                 }
                 p {
                     margin-bottom: 0px;
@@ -274,22 +250,18 @@
         }
     }
     .icon-center {
-        display: inline-block;
         background-color: $base-color;
         width: 54px;
         height: 54px;
         border-radius: 20px;
-        position: relative;
         left: 50%;
         bottom: -500px;
         @include breakpoint(mobile-max) {
-            display: none;
+            display: none !important;
         }
         span {
-            position: absolute;
             width: 15px;
             height: 23px;
-            // color: $text-color;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -330,7 +302,6 @@
             font-weight: 400;
             font-style: normal;
             @include breakpoint(ipad-max) {
-                // font-size: px !important;
                 @include fontSize(7px);
             }
             @include breakpoint(mobile-max) {
@@ -341,10 +312,11 @@
     }
 }
 
-// .nav-link {
-//     @include fontSize(14px);
-//     color: $text-color;
-// }
+.nav-link {
+    @include fontSize(14px);
+    color: $text-color;
+}
+
 .navbar-expand-lg {
     padding: 0px;
 }

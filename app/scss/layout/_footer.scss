@@ -1,9 +1,9 @@
 .footer {
-    display: flex;
-    flex-wrap: nowrap;
+    // display: flex;
+    // flex-wrap: nowrap;
     @include breakpoint(mobile-max) {
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
     }
     &__left {
         width: 60%;
@@ -150,7 +150,6 @@
         }
     }
     .footer__subscribe-form {
-        position: relative;
         form {
             .form-control {
                 width: 100%;
@@ -170,7 +169,6 @@
                 border-radius: 90px;
                 background-color: $text-white;
                 color: #393939;
-                position: absolute;
                 font-family: SFCompactDisplay;
                 font-weight: 900;
                 top: 5px;
@@ -195,17 +193,6 @@
     }
 }
 
-// .footer__menu-lists {
-//     padding-right: 74px;
-//     display: flex;
-//     flex-wrap: no-wrap;
-//     margin-bottom: 66px;
-//     @include breakpoint(ipad-max) {
-//         padding-right: 27px;
-//     }
-//     .footer__about-lists {}
-//     .footer__imp-lists {}
-// }
 .form-control:focus {
     color: $text-white;
     background-color: #fff;
@@ -220,8 +207,6 @@ input:focus {
 }
 
 .footer__menu-lists {
-    display: flex;
-    flex-wrap: no-wrap;
     width: 100%;
     padding-right: 74px;
     margin-bottom: 66px;
@@ -263,15 +248,15 @@ input:focus {
 }
 
 .footer__copy-rights {
-    display: flex;
+    // display: flex;
     @include breakpoint(mobile-max) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .footer__copy-rights-top {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         width: 75%;
         @include breakpoint(mobile-max) {
             justify-content: center;
@@ -309,8 +294,8 @@ input:focus {
         }
     }
     .footer__copy-rights-bottom {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         width: 25%;
         @include breakpoint(mobile-max) {
             justify-content: center;

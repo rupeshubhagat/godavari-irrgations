@@ -55,7 +55,6 @@
 }
 
 .slider-section {
-    display: flex;
     height: 500px;
     max-width: 1280px;
     width: 100%;
@@ -119,8 +118,8 @@
         text-align: center;
         margin: 0 auto;
         .ups-lists {
-            align-items: center;
-            display: flex;
+            // align-items: center;
+            // display: flex;
             justify-content: space-evenly;
             margin-bottom: 74px;
             @include breakpoint(mobile-max) {
@@ -173,8 +172,6 @@
     // &__top {}
     &__bottom {
         .ups-lists-tender {
-            display: flex;
-            flex-wrap: wrap;
             justify-content: space-evenly;
             li {
                 display: flex;
